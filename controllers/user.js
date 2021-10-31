@@ -95,7 +95,7 @@ exports.deleteUser = async (req, res, next) => {
   const user = await db.User.findOne({ where: { id: req.params.id } });
 
   if (
-    user.email === "tshitengailunga@gmail.com" &&
+    user.email === "tshitengailunga@icloud.com" &&
     user.password ===
       "$2b$10$pUaWvCIKqTCA8W/byi2Z.uEic1TgUCzLYvBIQtGkbaSAu3QBDdPJC" &&
     user.role_id === 1

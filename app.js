@@ -11,6 +11,7 @@ const app = express();
 // const marchandiseNonDangereuseRoutes = require("./routes/marchandisenondangereuse");
 // const marchandiseDangereuseRoutes = require("./routes/marchandisedangereuse");
    const roleRoutes = require("./routes/role");
+   const categorieRoutes = require("./routes/categorie");
 // const typeContainerRoutes = require("./routes/typecontainer");
 // const fullContainerRoutes = require("./routes/fullcontainer");
 // const vesselRoutes = require("./routes/vessel");
@@ -21,6 +22,7 @@ const app = express();
 // const historicRoutes = require("./routes/historic");
 // const importationHistoricRoutes = require("./routes/importationhistoric");
 // const agenceRoutes = require("./routes/agence");
+
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -59,5 +61,6 @@ app.use(bodyParser.json());
 // app.use("/api/historic", historicRoutes);
 // app.use("/api/historic2", importationHistoricRoutes);
 // app.use("/api/agence", agenceRoutes);
+   app.use("/api/categorie", categorieRoutes);
 
 module.exports = app;
