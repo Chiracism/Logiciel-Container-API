@@ -6,12 +6,12 @@ const app = express();
 
 // Routes
 // const materielRoulantRoutes = require("./routes/materielroulant");
-   const userRoutes = require("./routes/user");
+  const userRoutes = require("./routes/user");
 // const containerRoutes = require("./routes/container");
 // const marchandiseNonDangereuseRoutes = require("./routes/marchandisenondangereuse");
 // const marchandiseDangereuseRoutes = require("./routes/marchandisedangereuse");
-   const roleRoutes = require("./routes/role");
-   const categorieRoutes = require("./routes/categorie");
+  const roleRoutes = require("./routes/role");
+  const categorieRoutes = require("./routes/categorie");
 // const typeContainerRoutes = require("./routes/typecontainer");
 // const fullContainerRoutes = require("./routes/fullcontainer");
 // const vesselRoutes = require("./routes/vessel");
@@ -46,11 +46,11 @@ app.use(
 app.use(bodyParser.json());
 
 // app.use("/api/materielroulant", materielRoulantRoutes);
-   app.use("/api/user", userRoutes);
+  app.use("/api/user", userRoutes);
 // app.use("/api/container", containerRoutes);
 // app.use("/api/marchandisenondangereuse", marchandiseNonDangereuseRoutes);
 // app.use("/api/marchandisedangereuse", marchandiseDangereuseRoutes);
-   app.use("/api/role", roleRoutes);
+  app.use("/api/role", roleRoutes);
 // app.use("/api/typecontainer", typeContainerRoutes);
 // app.use("/api/fullcontainer", fullContainerRoutes);
 // app.use("/api/vessel", vesselRoutes);
@@ -61,6 +61,6 @@ app.use(bodyParser.json());
 // app.use("/api/historic", historicRoutes);
 // app.use("/api/historic2", importationHistoricRoutes);
 // app.use("/api/agence", agenceRoutes);
-   app.use("/api/categorie", categorieRoutes);
+  app.use("/api/categorie", categorieRoutes);
 
 module.exports = app;
