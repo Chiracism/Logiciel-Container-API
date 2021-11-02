@@ -2,5 +2,6 @@
     "prettier.insertPragma": true,
     "prettier.requireConfig": true,
     "prettier.enableDebugLogs": true,
-    "prettier.requirePragma": true
+    "prettier.requirePragma": true,
+    "prettier.withNodeModules": true
 }

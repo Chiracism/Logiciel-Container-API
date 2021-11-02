@@ -2,7 +2,7 @@ const db = require("../models/index");
 const { Op } = require("sequelize");
 
 // Endpoint to create materiel
-exports.materielClient = async (req, res, next) => {
+exports.createMateriel = async (req, res, next) => {
   const materielObject = JSON.parse(JSON.stringify(req.body));
 
   delete materielObject.id;
