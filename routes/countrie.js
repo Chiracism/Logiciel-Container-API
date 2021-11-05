@@ -3,7 +3,7 @@ const router = express.Router();
 
 import authMiddleware from "../middleware/auth";
 
-const countrietCtrl = require("../controllers/countrie");
+const countrieCtrl = require("../controllers/countrie");
 
 router.get("/", authMiddleware, countrieCtrl.getAllCountries);
 router.get("/:id", authMiddleware, countrieCtrl.getOneCountrie);
