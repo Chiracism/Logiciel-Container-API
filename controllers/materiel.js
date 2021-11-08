@@ -33,7 +33,7 @@ exports.getOneMateriel = async (req, res, next) => {
 exports.modifyMateriel = async (req, res, next) => {
   const materielObject = JSON.parse(JSON.stringify(req.query));
 
-  db.materiel.update(
+  db.Materiel.update(
     { ...materielObject },
     {
       where: { id: req.params.id },

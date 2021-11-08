@@ -5,7 +5,7 @@ import authMiddleware from "../middleware/auth";
 
 const materielCtrl = require("../controllers/materiel");
 
-router.get("/", authMiddleware, materielCtrl.getAllMaterils);
+router.get("/", authMiddleware, materielCtrl.getAllMateriels);
 router.get("/:id", authMiddleware, materielCtrl.getOneMateriel);
 router.put("/:id", authMiddleware, materielCtrl.modifyMateriel);
 router.post("/", authMiddleware, materielCtrl.createMateriel);

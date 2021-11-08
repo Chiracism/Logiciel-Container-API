@@ -1,13 +1,13 @@
 const db = require("../models/index");
 const { Op } = require("sequelize");
 
-// Endpoint to create countrie
+// Endpoint to create etat conteneur
 exports.createEtatConteneur = async (req, res, next) => {
   const etatconteneurObject = JSON.parse(JSON.stringify(req.body));
 
   delete etatconteneurObject.id;
 
-  db.EtatContneur.create({
+  db.Etat_Conteneur.create({
     ...etatconteneurObject,
   })
     .then((etatconteneur) => {
@@ -33,14 +33,14 @@ exports.getOneEtatConteneur = async (req, res, next) => {
 exports.modifyEtatConteneur = async (req, res, next) => {
   const etatconteneurObject = JSON.parse(JSON.stringify(req.query));
 
-  db.etatconteneur.update(
+  db.Etat_Conteneur.update(
     { ...etatconteneurObject },
     {
       where: { id: req.params.id },
     }
   )
     .then(async () => {
-      await db.EtatContneur.findOne({ where: { id: req.params.id } })
+      await db.EtatConteneur.findOne({ where: { id: req.params.id } })
         .then((etatconteneur) => {
           res.status(200).json(etatconteneur);
         })
@@ -51,16 +51,16 @@ exports.modifyEtatConteneur = async (req, res, next) => {
 
 // Endpoint to get all State Container
 exports.getAllEtatConteneurs = async (req, res, next) => {
-  db.Countrie.findAll()
-    .then((countries) => {
-      res.status(200).json(countries);
+  db.Etat_Conteneur.findAll()
+    .then((etatconteneurs) => {
+      res.status(200).json(etatconteneurs);
     })
     .catch((error) => res.status(400).json({ error }));
 };
 
 // Endpoint to delete etat container
 exports.deleteEtatConteneur = async (req, res, next) => {
-  db.Countrie.destroy({
+  db.Etat_Conteneur.destroy({
     where: {
       id: req.params.id,
     },
