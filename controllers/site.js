@@ -51,7 +51,7 @@ exports.modifySite = async (req, res, next) => {
 
 // Endpoint to get all sites
 exports.getAllSites = async (req, res, next) => {
-  db.Sites.findAll()
+  db.Site.findAll()
     .then((sites) => {
       res.status(200).json(sites);
     })
@@ -60,7 +60,7 @@ exports.getAllSites = async (req, res, next) => {
 
 // Endpoint to delete site
 exports.deleteSite = async (req, res, next) => {
-  db.Sites.destroy({
+  db.Site.destroy({
     where: {
       id: req.params.id,
     },

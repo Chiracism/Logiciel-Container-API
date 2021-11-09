@@ -3,7 +3,7 @@ const router = express.Router();
 
 import authMiddleware from "../middleware/auth";
 
-const soussiteCtrl = require("../controllers/sous_site");
+const soussiteCtrl = require("../controllers/soussite");
 
 router.get("/", authMiddleware, soussiteCtrl.getAllSoussites);
 router.get("/:id", authMiddleware, soussiteCtrl.getOneSoussite);

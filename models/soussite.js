@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Sous_Site extends Model {
+  class Soussite extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,17 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-       Sous_Site.belongsTo(models.Site, {
+       Soussite.belongsTo(models.Site, {
         foreignKey: "index",
       });
     }
   };
-  Sous_Site.init({
+  Soussite.init({
     index: DataTypes.STRING,
     name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Sous_Site',
+    modelName: 'Soussite',
   });
-  return Sous_Site;
+  return Soussite;
 };

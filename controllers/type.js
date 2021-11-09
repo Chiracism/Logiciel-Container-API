@@ -8,7 +8,7 @@ exports.createType = async (req, res, next) => {
   delete typeObject.id;
 
   db.Type.create({
-    ...typeObject,aqa
+    ...typeObject,
   })
     .then((type) => {
       res.status(200).json(type.dataValues);

@@ -8,7 +8,7 @@ exports.createSize = async (req, res, next) => {
   delete sizeObject.id;
 
   db.Size.create({
-    ...sizeObject,aqa
+    ...sizeObject,
   })
     .then((size) => {
       res.status(200).json(size.dataValues);
@@ -33,7 +33,7 @@ exports.getOneSize = async (req, res, next) => {
 exports.modifySize = async (req, res, next) => {
   const sizeObject = JSON.parse(JSON.stringify(req.query));
 
-  db.size.update(
+  db.Size.update(
     { ...sizeObject },
     {
       where: { id: req.params.id },

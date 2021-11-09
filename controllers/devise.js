@@ -52,7 +52,7 @@ exports.modifyDevise = async (req, res, next) => {
 // Endpoint to get all devise
 exports.getAllDevises = async (req, res, next) => {
   db.Devise.findAll()
-    .then((Devises) => {
+    .then((devises) => {
       res.status(200).json(devises);
     })
     .catch((error) => res.status(400).json({ error }));
