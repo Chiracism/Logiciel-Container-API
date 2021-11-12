@@ -13,6 +13,7 @@ const app = express();
   const roleRoutes = require("./routes/role");
   const categorieRoutes = require("./routes/categorie");
   const countrieRoutes = require("./routes/countrie");
+  const clientRoutes = require("./routes/client");
   const deviseRoutes = require("./routes/devise");
   const etatconteneurRoutes = require("./routes/etat_conteneur");
   const materielRoutes = require("./routes/materiel");
@@ -26,6 +27,7 @@ const app = express();
   const typeRoutes = require("./routes/type");
   const masterfileRoutes = require("./routes/masterfile");
   const statRoutes = require("./routes/stats");
+  const mouvementRoutes = require("./routes/mouvement");
 // const typeContainerRoutes = require("./routes/typecontainer");
 // const fullContainerRoutes = require("./routes/fullcontainer");
 // const vesselRoutes = require("./routes/vessel");
@@ -48,6 +50,7 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, PATCH, OPTIONS"
   );
+
   next();
 });
 
@@ -66,6 +69,7 @@ app.use(bodyParser.json());
 // app.use("/api/marchandisedangereuse", marchandiseDangereuseRoutes);
   app.use("/api/role", roleRoutes);
   app.use("/api/categorie", categorieRoutes);
+  app.use("/api/client", clientRoutes);
   app.use("/api/countrie", countrieRoutes);
   app.use("/api/devise", deviseRoutes);
   app.use("/api/etat_conteneur", etatconteneurRoutes);
@@ -80,6 +84,7 @@ app.use(bodyParser.json());
   app.use("/api/type", typeRoutes);
   app.use("/api/masterfile", masterfileRoutes);
   app.use("/api/stat", statRoutes);
+  app.use("/api/mouvement", mouvementRoutes);
 // app.use("/api/typecontainer", typeContainerRoutes);
 // app.use("/api/fullcontainer", fullContainerRoutes);
 // app.use("/api/vessel", vesselRoutes);

@@ -17,12 +17,6 @@ module.exports = {
       impot: {
         type: Sequelize.STRING
       },
-      idnat: {
-        type: Sequelize.STRING
-      },
-      activity: {
-        type: Sequelize.STRING
-      },
       address: {
         type: Sequelize.STRING
       },
