@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Rate.init({
-    rate_date: DataTypes.DATE,
+    ratedate: DataTypes.DATE,
     amount: DataTypes.FLOAT
   }, {
     sequelize,

@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      rate_date: {
+      ratedate: {
         type: Sequelize.DATE
       },
       amount: {
